@@ -65,7 +65,7 @@ export const DBProvider = ({ children }: AuthProviderProps): JSX.Element => {
     // SNAPSHOT LISTENER FOR AUTHORS
     useEffect(() => {
       const docRef = collection(db, "authors");
-      const q = query(docRef, where("count", ">", 0), orderBy("count", "desc"));
+      const q = query(docRef,  orderBy("count", "desc"));
       const unsubscribe = onSnapshot(q, querySnapshot => {
         if (querySnapshot.metadata.hasPendingWrites) {
           return;

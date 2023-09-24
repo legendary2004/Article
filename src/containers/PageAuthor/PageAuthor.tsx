@@ -61,7 +61,6 @@ const PageAuthor: FC<PageAuthorProps> = ({ className = "" }) => {
     if (!AUTHOR) return;
     const constraints = [where('authorId', '==', AUTHOR.id), where('published', '==', true)];
     countPosts(constraints).then(count => {
-      if (count > 0) {
         getPaginatedPublicPosts(AUTHOR.id, "", batchSize, "next")
           .then(snapshot => {
             let _posts = [...posts];
@@ -71,8 +70,7 @@ const PageAuthor: FC<PageAuthorProps> = ({ className = "" }) => {
             });
             setPosts(_posts);
             setTotalPostCount(count);
-          });
-      }
+          })
     });
   }, [allAuthorsFirstLoad]);
 
