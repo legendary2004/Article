@@ -1,0 +1,29 @@
+{
+  "username": "Username or Email",
+  "username.required": "Username or Email is required.",
+
+  "firstname": "First name",
+  "firstName.required": "First name is required.",
+
+  "lastname": "Last name",
+  "lastName.required": "Last name is required.",
+
+  "email": "Email",
+  "email.required": "Email is required.",
+
+  "password": "Password",
+  "password.required": "Password is required.",
+
+  "confirm.password": "Password",
+  "confirmPassword.required": "Confirm password is required.",
+
+  "login": "Hyr",
+  "login.page": "Faqja e login",
+  "register": "Regjistrohu",
+  "register.account": "Krijo një llogari",
+  "forgot.password": "Keni harruar fjalëkalimin?",
+  "account": "Llogari",
+  "home": "Kryesore",
+  "save": "Ruaj",
+  "create_account": "Krijo një llogari"
+}
