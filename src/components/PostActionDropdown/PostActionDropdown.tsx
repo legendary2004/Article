@@ -6,6 +6,8 @@ import { PostDataType } from "data/types";
 import ModalHideAuthor from "./ModalHideAuthor";
 import { useHistory } from "react-router";
 
+
+
 export interface PostActionDropdownProps {
   containerClassName?: string;
   iconClass?: string;
@@ -24,21 +26,25 @@ const PostActionDropdown: FC<PostActionDropdownProps> = ({
       id: "copylink",
       name: "Copy link",
       icon: "las la-copy",
+      
     },
     {
       id: "commentThisArticle",
       name: "Comment this article",
       icon: "las la-comment-dots",
+      
     },
     {
       id: "hideThisAuthor",
       name: "Hide this author",
       icon: "las la-user-slash",
+      
     },
     {
       id: "reportThisArticle",
       name: "Report this article",
       icon: "las la-flag",
+      
     },
   ];
   //
@@ -53,6 +59,10 @@ const PostActionDropdown: FC<PostActionDropdownProps> = ({
 
   const openModalHideAuthor = () => setShowModalHideAuthor(true);
   const onCloseModalHideAuthor = () => setShowModalHideAuthor(false);
+
+  postData.href = `/single-sidebar/${postData.id}`
+
+  console.log(postData)
 
   const hanldeClickDropDown = (item: typeof actions[number]) => {
     if (item.id === "copylink") {
@@ -91,6 +101,7 @@ const PostActionDropdown: FC<PostActionDropdownProps> = ({
         className={`text-neutral-500 dark:text-neutral-400 flex items-center justify-center rounded-full  ${containerClassName} ${twFocusClass()}`}
         iconClass={iconClass}
         data={actions}
+        postData={postData}
         panelMenusClass={
           dropdownPositon === "up" ? "origin-bottom-right bottom-0" : undefined
         }

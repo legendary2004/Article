@@ -10,6 +10,7 @@ const mapPostDataToSinglePage = (
   snapshot: DocumentData,
   authors: PostAuthorType[]
 ): SinglePageType | undefined => {
+  console.log(snapshot.data())
   let user = firebase.auth.currentUser;
   let userLikedPosts;
   let userBookmarkedPosts;

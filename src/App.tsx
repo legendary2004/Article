@@ -6,15 +6,13 @@ import { DBProvider } from "firebase/firestoreManager";
 
 function App() {
   return (
-    <Suspense fallback="...">
-      <div className="bg-white text-base dark:bg-neutral-900 text-neutral-900 dark:text-neutral-200">
+    <div className="bg-white text-base dark:bg-neutral-900 text-neutral-900 dark:text-neutral-200">
         <AuthProvider>
           <DBProvider>
           <MyRouter />
           </DBProvider>
         </AuthProvider>
       </div>
-    </Suspense>
   );
 }
 

@@ -1,5 +1,6 @@
 import { SocialType } from "components/SocialsShare/SocialsShare";
 import React, { FC } from "react";
+import { FacebookShareButton } from "react-share";
 
 export interface SocialsListProps {
   className?: string;
@@ -13,10 +14,11 @@ const socialsDemo: SocialType[] = [
     name: "Facebook",
     icon: "lab la-facebook-square",
     href: "#",
+  
   },
-  { id: "Twitter", name: "Twitter", icon: "lab la-twitter", href: "#" },
-  { id: "Youtube", name: "Youtube", icon: "lab la-youtube", href: "#" },
-  { id: "Instagram", name: "Instagram", icon: "lab la-instagram", href: "#" },
+  { id: "Twitter", name: "Twitter", icon: "lab la-twitter", href: "#", },
+  { id: "Youtube", name: "Youtube", icon: "lab la-youtube", href: "#", },
+  { id: "Instagram", name: "Instagram", icon: "lab la-instagram", href: "#", },
 ];
 
 export const SOCIALS_2 = socialsDemo;

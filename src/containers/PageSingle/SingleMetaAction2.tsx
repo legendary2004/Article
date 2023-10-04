@@ -16,6 +16,7 @@ const SingleMetaAction2: FC<SingleMetaAction2Props> = ({
   meta,
 }) => {
   const { id, bookmark } = meta;
+  
 
   return (
     <div className={`nc-SingleMetaAction2 ${className}`}>
@@ -56,6 +57,7 @@ const SingleMetaAction2: FC<SingleMetaAction2Props> = ({
           )}
           onClick={() => {}}
           data={SOCIALS_DATA}
+          postData={meta}
         />
         <PostActionDropdown
           containerClassName="h-9 w-9 bg-neutral-100 hover:bg-neutral-200 dark:bg-neutral-800 dark:hover:bg-neutral-700"
@@ -63,6 +65,7 @@ const SingleMetaAction2: FC<SingleMetaAction2Props> = ({
           postData={meta}
         />
       </div>
+      
     </div>
   );
 };

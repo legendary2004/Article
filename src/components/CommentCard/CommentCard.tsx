@@ -10,6 +10,7 @@ import ModalEditComment from "./ModalEditComment";
 import ModalDeleteComment from "./ModalDeleteComment";
 import ModalReportItem from "components/ModalReportItem/ModalReportItem";
 
+
 export interface CommentType {
   id: number;
   author: PostAuthorType;
@@ -36,10 +37,10 @@ const CommentCard: FC<CommentCardProps> = ({
 }) => {
   const { author, id, date, parentId, content } = comment;
   const actions = [
-    { id: "edit", name: "Edit", icon: "las la-edit" },
-    { id: "reply", name: "Reply", icon: "las la-reply" },
-    { id: "report", name: "Report abuse", icon: "las la-flag" },
-    { id: "delete", name: "Delete", icon: "las la-trash-alt" },
+    { id: "edit", name: "Edit", icon: "las la-edit", },
+    { id: "reply", name: "Reply", icon: "las la-reply",},
+    { id: "report", name: "Report abuse", icon: "las la-flag",  },
+    { id: "delete", name: "Delete", icon: "las la-trash-alt",},
   ];
 
   const textareaRef = useRef(null);
@@ -117,13 +118,13 @@ const CommentCard: FC<CommentCardProps> = ({
         <div className="flex-grow flex flex-col p-4 ml-2 text-sm border border-neutral-200 rounded-xl sm:ml-3 sm:text-base dark:border-neutral-700">
           {/* AUTHOR INFOR */}
           <div className="relative flex items-center pr-6">
-            <div className="absolute -right-3 -top-3">
+            {/* <div className="absolute -right-3 -top-3">
               <NcDropDown
                 className={`p-2 text-neutral-500 flex items-center justify-center rounded-lg hover:text-neutral-800 dark:hover:text-neutral-200 sm:hover:bg-neutral-100 dark:hover:bg-neutral-800 ${twFocusClass()}`}
                 data={actions}
                 onClick={hanldeClickDropDown}
               />
-            </div>
+            </div> */}
             <Link
               className="flex-shrink-0 font-semibold text-neutral-800 dark:text-neutral-100"
               to={author.href}
